@@ -15,3 +15,20 @@ Filename: pool/main/a/arcana-world/arcana-world_0.3.0-1_amd64.deb
 Size: 6474588
 SHA256: df7c544540865d0cab7074f7793bda1ff0f1fc2193cb571eaa924ee1f27e34a7
 
+Package: arcana-world
+Version: 0.3.0-2
+Architecture: amd64
+Maintainer: LingLambda <abc1514671906@163.com>
+Section: net
+Priority: optional
+Installed-Size: 24032
+Depends: libc6 (>= 2.34), libwayland-client0, libpangocairo-1.0-0, libpango-1.0-0, libglib2.0-0t64 | libglib2.0-0, libcairo2, libasound2t64 | libasound2, ca-certificates
+Recommends: fonts-noto-cjk
+Homepage: https://github.com/TarocchiLive/arcana-world
+Description: Terminal application for Bilibili live streaming
+ Includes the Wayland overlay and text-to-speech helpers.
+ Overlay requires a compositor supporting wlr-layer-shell.
+Filename: pool/main/a/arcana-world/arcana-world_0.3.0-2_amd64.deb
+Size: 6472608
+SHA256: 4a169026b1b3a18d682c639200c32c8787f05fe14ed2a0b01b3cfd05b7f43555
+

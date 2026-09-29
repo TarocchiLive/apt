@@ -5,26 +5,26 @@ Origin: TarocchiLive
 Label: TarocchiLive
 Suite: stable
 Codename: stable
-Date: Tue, 29 Sep 2026 08:33:34 GMT
+Date: Tue, 29 Sep 2026 08:41:22 GMT
 Architectures: amd64 arm64
 Components: main
 Description: Arcana World official packages
 SHA256:
- 20d12bfd69b7cd590c6618bec7e9550a2f00176f4930584382aad5bd360de256 743 main/binary-amd64/Packages
- 8a6bf14ef0ccb345319bde4c08b23b304c559624f8d3551aba8bc8bccb598ac2 486 main/binary-amd64/Packages.gz
- 96ae783d7b42f2b85620513343d7598b6027f536bfa42c387aea3f1f14db82b8 743 main/binary-arm64/Packages
- 5658e258fb72fd11d118bc2bda7c29740c80736189b0a9454bcf899a382bf955 487 main/binary-arm64/Packages.gz
+ 6998d84f6d94f7803c6ceb018b4d6a4206df391ff040156eb05fa23bf135e013 1488 main/binary-amd64/Packages
+ 63e7432dc9a35732b569474a4918b93301cd67c24daa64b5edafa711310fba12 586 main/binary-amd64/Packages.gz
+ 00837e55865ea901e0b21ac1cc25b6140afccdcd36e839b4f43fa938bdae3f79 1488 main/binary-arm64/Packages
+ 1cae9b29fb0b39e2d3448d1626b972a5cc84896791c98417755cfc70d27b0c3d 583 main/binary-arm64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEp+V6fQ7h6g6J6K7zmWaCLHBRa5wFAmq7d94ACgkQmWaCLHBR
-a5z7VQv5AeQ/Ly/w4ANODnlcWwOPWcGNLKnBgzFQf0Olx2RuFzg7nGJRW8A3+q3m
-xGlyqH4t696LkO12ojHDbD8Wpo5vUU23rjQu+sL6RMPFr4ceRVqPuKTILMsQKUKj
-i7FlyYlajnUg2HCwKRbws+a9Havk+jKEEobYEgxsWMs2ZEPG8gKv05h2mrNvNhJz
-A40QOMik5FJQAELU+7PDr2hgiCUvF9jZcS3MM8679y8tlqr5BBLp+3qrd+C0r7+w
-l2sfQC56n+mvEmjiD6zc8XjymMA/Ux+MtzWNdbZbSKql7p52N/Q7eJPuUSSukd4P
-2QpIxJv2QkQR4h+dJe/h8LgjuGQjpq+tinozjUGx6MgNyhdhyqwc7pdDFXa38S3S
-L9siWG/e9XGwRt4A4/HG9cESjkhJ8tcPrbm6SKmEhj1pCMXmnP+bXX9XImdMVWTW
-r1DaajSnjTjiCZLVblxSJe196guNd2gxfmOFKGf/0Pl83kWgh1trUbDRO3EYp5if
-3UkcjiO5
-=v8+A
+iQGzBAEBCgAdFiEEp+V6fQ7h6g6J6K7zmWaCLHBRa5wFAmq7ebIACgkQmWaCLHBR
+a5zxjQv/cPs+pPgF4TdAgczyvuNt5XCk0NId25G7H7NlntTAK+qvOhsE4LWUCsTq
+KO0sOiCp/UJbS95FGX4TeMe6rckwnAHZ/HnAJBb7htVtsPGD/j5AYw6eWthreGzO
+AvspoJUfSJLn/+Iy6V5NVAdQG7VeeLDBoDNDQZO46BVdGHYLMsXaWQRWo39l5f1p
+N9Q3cywfpIRlcaPI0P1+ZMJ50WRtteptHz8OJDdkANH5svM2b6puJQkLeC9nXAJX
+rVPM0YXPGRSeHGOfD8dchqp5nmhGJh/CLr/1iT7yqggJcUhPzPXipdX28uuCA5K7
+Bwh24H1RNV5TFR/p+/7YW1/knCz+xgpy/HV8jDwEIBVC9ZYYko18ZvKmkpd0ptz3
+vErfULKQuEYJepIU3Mdj0K8TISisOuueO7J+EQf96Gu6IEZiPNrwCnmiZgSvdQvb
+1ITb4UzN829NzTb9fvO2l6AFqCw9IWfW3C/yX4Dp8ljdnUvoXpVcVo9aD0ujZltB
+jSY7FOM8
+=Aqqx
 -----END PGP SIGNATURE-----

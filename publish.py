@@ -18,6 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description="Build Debian packages and signed APT metadata from a verified release")
     parser.add_argument("version")
     parser.add_argument("downloads", type=Path)
+    parser.add_argument("--revision", default="1")
     parser.add_argument("--gnupghome", type=Path, required=True)
     parser.add_argument("--signing-key", required=True)
     args = parser.parse_args()
@@ -58,8 +59,8 @@ def main():
             size = (sum(p.stat().st_size for p in (package / "usr").rglob("*") if p.is_file() and not p.is_symlink()) + 1023) // 1024
             # 发行包 ELF 的最高 GLIBC 符号版本是 2.34；TTS 动态加载 ALSA。
             (control / "control").write_text(
-                f"Package: arcana-world\nVersion: {version}-1\nArchitecture: {arch}\n"
-                "Maintainer: TarocchiLive <apt@tarocchi.live>\nSection: net\nPriority: optional\n"
+                f"Package: arcana-world\nVersion: {version}-{args.revision}\nArchitecture: {arch}\n"
+                "Maintainer: LingLambda <abc1514671906@163.com>\nSection: net\nPriority: optional\n"
                 f"Installed-Size: {size}\n"
                 "Depends: libc6 (>= 2.34), libwayland-client0, libpangocairo-1.0-0, libpango-1.0-0, libglib2.0-0t64 | libglib2.0-0, libcairo2, libasound2t64 | libasound2, ca-certificates\n"
                 "Recommends: fonts-noto-cjk\n"
@@ -68,7 +69,7 @@ def main():
                 " Includes the Wayland overlay and text-to-speech helpers.\n"
                 " Overlay requires a compositor supporting wlr-layer-shell.\n"
             )
-            run("dpkg-deb", "--root-owner-group", "--build", "-Zxz", str(package), str(pool / f"arcana-world_{version}-1_{arch}.deb"))
+            run("dpkg-deb", "--root-owner-group", "--build", "-Zxz", str(package), str(pool / f"arcana-world_{version}-{args.revision}_{arch}.deb"))
     suite = root / "dists/stable"
     for arch in ("amd64", "arm64"):
         index = suite / f"main/binary-{arch}"
