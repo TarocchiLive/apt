@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TarocchiLive APT repository</title>
+<h1>Arcana World APT repository</h1>
+<p>Signed packages for Debian and Ubuntu, amd64 and arm64. Requires glibc 2.34 or newer (for example Debian 12+ or Ubuntu 22.04+).</p>
+<pre>sudo apt-get update
+sudo apt-get install -y ca-certificates curl
+sudo install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://tarocchilive.github.io/apt/tarocchilive-archive-keyring.gpg | sudo tee /etc/apt/keyrings/tarocchilive.gpg &gt;/dev/null
+sudo chmod 0644 /etc/apt/keyrings/tarocchilive.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/tarocchilive.gpg] https://tarocchilive.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/tarocchilive.list
+sudo apt-get update
+sudo apt-get install arcana-world</pre>
+<p>Signing key fingerprint: <code>A7E5 7A7D 0EE1 EA0E 89E8 AEF3 9966 822C 7051 6B9C</code>. Expires 2028-09-28. Packages preserve the executable and adjacent libexec helpers. Overlay requires a Wayland compositor with wlr-layer-shell; TTS needs a working audio session.</p>
+<h2>Version 0.3.0</h2>
+<ul>
+<li><a href="pool/main/a/arcana-world/arcana-world_0.3.0-1_amd64.deb">amd64 Debian package</a></li>
+<li><a href="pool/main/a/arcana-world/arcana-world_0.3.0-1_arm64.deb">arm64 Debian package</a></li>
+<li><a href="https://github.com/TarocchiLive/arcana-world/archive/refs/tags/v0.3.0.tar.gz">Corresponding source archive</a></li>
+<li><a href="https://github.com/TarocchiLive/arcana-world/tree/v0.3.0">Source and build instructions</a></li>
+<li><a href="https://github.com/TarocchiLive/arcana-world/blob/v0.3.0/LICENSE">GPL-3.0-only license</a></li>
+</ul>
+<h2>Repository maintenance</h2>
+<p>Download both Linux release archives and checksums.txt from the same upstream release. Run <code>python3 publish.py VERSION DOWNLOAD_DIRECTORY --gnupghome PRIVATE_KEY_DIRECTORY --signing-key FINGERPRINT</code> with Python 3.12+, dpkg-deb, xz and GnuPG. The script verifies archive checksums, rebuilds packages and signs stable metadata. Review, commit and push the generated files to main to publish via GitHub Pages. Keep the private signing key outside this repository; renew and publish the public key before expiry.</p>
+</html>
